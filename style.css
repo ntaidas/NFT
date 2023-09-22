@@ -48,6 +48,7 @@ main > .hero {
   margin-left: 2em;
   display: flex;
   margin-bottom: 4.5em;
+  overflow: visible;
 }
 main > .hero > article {
   margin-top: 3em;
@@ -73,11 +74,34 @@ main > .hero > article p {
   margin-bottom: 1.5em;
 }
 main > .hero > .heroBack {
+  overflow: visible;
   margin-left: 20px;
+  position: relative;
 }
 main > .hero > .heroBack > img {
   width: 176px;
   height: 278px;
+}
+main > .hero > .heroBack::before {
+  content: "";
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 77, 203, 0.8) 15%, rgba(255, 255, 255, 0.168504902) 35%);
+  z-index: -1;
+  top: -153px;
+}
+main > .hero > .heroBack::after {
+  content: "";
+  overflow: visible;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  background: radial-gradient(circle, rgb(255, 196, 77) 15%, rgba(255, 255, 255, 0.168504902) 40%);
+  z-index: -1;
+  bottom: 32px;
+  left: -37px;
 }
 main > .upsell {
   background: linear-gradient(90deg, rgb(204, 115, 145) 3%, rgb(226, 36, 63) 20%, rgb(252, 176, 69) 75%, rgb(152, 176, 99) 98%);
@@ -396,6 +420,28 @@ footer .bottom > p:last-child {
   main > .hero > .heroBack > img {
     width: 328px;
     height: 519px;
+  }
+  main > .hero > .heroBack::before {
+    content: "";
+    overflow: visible;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 77, 203, 0.8) 25%, rgba(255, 255, 255, 0.168504902) 55%);
+    z-index: -1;
+    top: 30px;
+    bottom: 20px;
+  }
+  main > .hero > .heroBack::after {
+    content: "";
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(circle, rgb(255, 196, 77) 10%, rgba(255, 255, 255, 0.168504902) 35%);
+    z-index: -1;
+    top: 80px;
+    bottom: 20px;
+    left: 50px;
   }
   main > .upsell {
     margin: 7em 5em 2em 5em;

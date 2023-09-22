@@ -15,7 +15,10 @@ $gradiant: linear-gradient(
   rgba(252, 176, 69, 1) 75%,
   rgba(152, 176, 99, 1) 98%
 );
-
+$pimpas1small: radial-gradient(circle, rgba(255,77,203,0.8) 15%, rgba(255,255,255,0.16850490196078427) 35%);
+$pimpas2small: radial-gradient(circle, rgba(255,196,77,1) 15%, rgba(255,255,255,0.16850490196078427) 40%);
+$pimpas1: radial-gradient(circle, rgba(255,77,203,0.8) 25%, rgba(255,255,255,0.16850490196078427) 55%);
+$pimpas2: radial-gradient(circle, rgba(255,196,77,1) 10%, rgba(255,255,255,0.16850490196078427) 35%);
 .colorButton {
   padding: 4px;
   background: $gradiant;
@@ -64,6 +67,7 @@ main {
     margin-left: 2em;
     display: flex;
     margin-bottom: 4.5em;
+    overflow: visible;
     > article {
       margin-top: 3em;
       min-width: 274px;
@@ -88,11 +92,36 @@ main {
       }
     }
     > .heroBack {
+      overflow: visible;
       margin-left: 20px;
+      position: relative;
       > img {
         width: 176px;
         height: 278px;
       }
+      
+    }
+    >.heroBack::before{
+      content: '';
+      overflow: visible;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $pimpas1small;
+      z-index: -1;
+      top:-153px;
+    }
+    >.heroBack::after{
+      content: '';
+      overflow: visible;
+      width: 120%;
+      height: 100%;
+      position: absolute;
+      background: $pimpas2small;
+      z-index: -1;
+      bottom: 32px;
+      left: -37px;
+
     }
   }
   > .upsell {
@@ -426,6 +455,29 @@ footer{
 
             
           }
+        }
+        >.heroBack::before{
+          content: '';
+          overflow: visible;
+          width: 70%;
+          height: 100%;
+          position: absolute;
+          background: $pimpas1;
+          z-index: -1;
+          top:30px;
+          bottom: 20px;
+        }
+        >.heroBack::after{
+          content: '';
+          width: 70%;
+          height: 100%;
+          position: absolute;
+          background: $pimpas2;
+          z-index: -1;
+          top:80px;
+          bottom: 20px;
+          left: 50px;
+    
         }
       }
       >.upsell{
