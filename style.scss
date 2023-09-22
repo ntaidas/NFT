@@ -321,10 +321,9 @@ main {
             display: none;
         }
       }
-      > p:nth-child(3)>.end::after{
+      > p:nth-child(3)::after{
         content: '.';
       }
-      .colorButton{}
     }
     > div {
         display: flex;
@@ -523,11 +522,20 @@ footer{
           p:nth-child(3){
             width: 537px;
           }
+          >p:nth-child(3){
+            >.forDesk{
+              display: inline;
+          }
+          }
+          > p:nth-child(3)::after{
+            content: '';
+          }
         }
         >div{
           width: 100%;
           justify-content: center;
         }
+
       }
    }
    footer{

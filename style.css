@@ -299,7 +299,7 @@ main > .upsellFooter > article > p:nth-child(3) {
 main > .upsellFooter > article > p:nth-child(3) > .forDesk {
   display: none;
 }
-main > .upsellFooter > article > p:nth-child(3) > .end::after {
+main > .upsellFooter > article > p:nth-child(3)::after {
   content: ".";
 }
 main > .upsellFooter > div {
@@ -487,6 +487,12 @@ footer .bottom > p:last-child {
   }
   main > .upsellFooter > article p:nth-child(3) {
     width: 537px;
+  }
+  main > .upsellFooter > article > p:nth-child(3) > .forDesk {
+    display: inline;
+  }
+  main > .upsellFooter > article > p:nth-child(3)::after {
+    content: "";
   }
   main > .upsellFooter > div {
     width: 100%;
