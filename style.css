@@ -74,7 +74,6 @@ main > .hero > article p {
   margin-bottom: 1.5em;
 }
 main > .hero > .heroBack {
-  overflow: visible;
   margin-left: 20px;
   position: relative;
 }
